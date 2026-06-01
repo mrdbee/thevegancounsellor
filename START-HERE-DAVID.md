@@ -20,25 +20,59 @@ Your job is just the first box: ask Claude to change the website, check it looks
 
 ---
 
-## One-time setup — no terminal needed
+## Before your first session
 
-You'll work entirely inside the **Claude desktop app**, using its built-in **Claude Code panel**.
-No command line required. Dean will get you to this point, but for reference:
+A couple of things Dean sets up for you first (you can't do these yourself):
 
-- Have the **Claude app** installed and be signed in.
-- Make sure the project folder is on your computer (Dean will share it / the GitHub link).
-- Node.js installed (Dean can confirm). Claude will tell you if anything's missing.
+- You have a **GitHub account**, and Dean has **invited you to the project** (check your email
+  for a GitHub invite and click *Accept*).
+- The **Claude desktop app** is installed and you're signed in.
 
-Then, in the Claude app:
+You do **not** need to install anything else by hand. Your computer probably hasn't been set up
+for building websites before — that's fine. Claude will install whatever's missing for you in
+the first session below. You'll never type terminal commands yourself; Claude runs them, and just
+pauses when it needs you to type your computer password or click an "Allow" button.
 
-1. Open the **Claude Code** panel.
-2. Choose **Open folder** (or "Add working folder") and select this project folder —
-   `thevegancounsellor`.
-3. That's it. Claude is now connected to your website's files.
+## Your very first session — copy this in
 
-Claude automatically reads the project's guide when it opens the folder, so it already knows what
-the site is and how it's built. If you ever open it and it seems unsure, just say
-*"this is The Vegan Counsellor website — read AGENTS.md to get up to speed."*
+1. In the Claude app, open the **Claude Code** panel.
+2. Make a **new empty folder** for the website (for example, a folder called `thevegancounsellor`
+   inside your Documents), and **open that folder** in the Claude Code panel.
+3. Paste the prompt below and send it. Then just follow along and do what Claude asks.
+
+> **Heads-up:** this first setup can take 10–20 minutes and you'll be asked for your computer
+> password once or twice — that's normal. You only ever do this once.
+
+```text
+Hi Claude! I'm David, and I'm not technical — this is my first time using you, and my
+computer has probably never been set up for building websites. Please set everything up
+for me, one step at a time, explaining each step in plain English. Whenever you need me
+to type my computer password or click an "Allow"/"Install" button, stop and tell me
+exactly what to do.
+
+Here's the goal: get my website project onto this computer and running, so I can start
+editing it just by talking to you.
+
+Please do this in order:
+1. Check what's already installed (git, Node.js, and the GitHub CLI "gh") and tell me
+   what's missing.
+2. Install anything that's missing, using the right method for my operating system.
+3. Help me sign in to GitHub by running "gh auth login" — I already have an account and
+   I've been invited to the project. Walk me through the browser sign-in.
+4. Clone my project into this current folder:
+   https://github.com/mrdbee/thevegancounsellor.git
+   (clone it into the folder I already have open, so the files land right here.)
+5. Install the project's dependencies (npm install).
+6. Start the website on my computer and show me a screenshot so I know it's working.
+7. Read the files START-HERE-DAVID.md and AGENTS.md so you understand the project and
+   the way David and Dean work together.
+
+Go slowly, and stop and ask me whenever you need something. Thanks!
+```
+
+Once that finishes, you're fully set up — and you never repeat it. From here on, just open the
+same folder in the Claude Code panel and start talking. Claude reads the project guide
+automatically, so it always knows what the site is and how it's built.
 
 ---
 
