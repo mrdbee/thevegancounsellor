@@ -49,10 +49,19 @@ Whenever you want to change something, follow this loop:
 1. **Ask.** Describe what you want in plain English. Be specific about wording and feel.
 2. **Look.** Ask Claude to *"show me what it looks like"* — it can open the site and screenshot
    it. Tell it what to adjust until you're happy.
-3. **Publish.** Say: *"save and publish this"*. Claude will commit and push to GitHub, and
-   Vercel updates the live site within a minute or two.
+3. **Preview.** Say: *"save and publish this"*. Claude puts your change on a **private preview
+   link** first (a real copy of the site that the public can't see) and gives you the link.
+   Open it and check it on your phone or computer.
+4. **Go live.** Once you're happy with the preview, tell Claude *"looks good, make it live"*.
+   The real website updates within a minute or two.
 
-You don't need to memorise any commands — just talk. The phrases above are enough.
+You don't need to memorise any commands — just talk. The phrases above are enough. Behind the
+scenes Claude keeps your work separate from Dean's so you two never clash — you don't have to
+think about any of that.
+
+> **Why the preview step?** The live site is what your clients see. The preview link lets you
+> (and Dean, if you want a second opinion) check a change on a real page *before* it goes public.
+> Nothing reaches the live site until you say "make it live".
 
 ---
 

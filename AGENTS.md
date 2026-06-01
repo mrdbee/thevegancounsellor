@@ -44,6 +44,29 @@ edit files himself.
 - **Adding a page:** create `src/app/<name>/page.tsx`. Add a link to it in the site header so
   visitors can find it.
 
+## Git workflow — IMPORTANT, follow this exactly
+
+Two people share this repo (David, who builds the site, and Dean, who handles backend/infra).
+`main` is the **live production site** — every commit on `main` auto-deploys to Vercel. To keep
+their work from colliding, **never commit or push directly to `main`.** Always use this flow:
+
+1. **Start fresh.** Before new work, sync main and branch off it:
+   `git checkout main && git pull` then `git checkout -b <name>/<short-topic>`.
+   Use the prefix of whoever is working — `david/...` on David's machine, `dean/...` on Dean's
+   (e.g. `david/about-page`, `dean/booking-form`). One branch per piece of work.
+2. **Commit** your changes to that branch with clear messages.
+3. **Run `npm run build`** and make sure it passes before publishing.
+4. **Push and open a PR:** `git push -u origin <branch>` then `gh pr create --fill`. Vercel
+   posts a **preview URL** on the PR — a live copy that is NOT the production site.
+5. **Show the user the preview URL** and let them confirm it looks right.
+6. **Merge once approved:** `gh pr merge --squash --delete-branch`. This updates `main`, which
+   deploys to the live site automatically (~1 min). Then `git checkout main && git pull`.
+7. **Conflicts:** if a merge or push reports a conflict, resolve it carefully against the latest
+   `main`. NEVER force-push to `main`, and never use `--no-verify`.
+
+When David says "save and publish", run steps 2–6 for him end to end — he just needs to approve
+the preview. Keep branches short-lived; don't let work pile up on a long-running branch.
+
 ## Conventions & tone
 
 - Keep the voice warm, calm, and professional — this is a counselling practice, not a startup.
