@@ -20,23 +20,25 @@ Your job is just the first box: ask Claude to change the website, check it looks
 
 ---
 
-## One-time setup
+## One-time setup — no terminal needed
 
-Dean will get you to this point, but for reference, you need:
+You'll work entirely inside the **Claude desktop app**, using its built-in **Claude Code panel**.
+No command line required. Dean will get you to this point, but for reference:
 
-- **Claude Code** installed and signed in.
-- This project folder on your machine (Dean will share the GitHub link; tell Claude
-  *"clone this repo: <link> and open it"* if it's not already here).
-- Node.js installed (Dean can confirm). Claude will tell you if something's missing.
+- Have the **Claude app** installed and be signed in.
+- Make sure the project folder is on your computer (Dean will share it / the GitHub link).
+- Node.js installed (Dean can confirm). Claude will tell you if anything's missing.
 
-Then, in your terminal, open this folder and start Claude Code by typing:
+Then, in the Claude app:
 
-```
-claude
-```
+1. Open the **Claude Code** panel.
+2. Choose **Open folder** (or "Add working folder") and select this project folder —
+   `thevegancounsellor`.
+3. That's it. Claude is now connected to your website's files.
 
-That's it — you're in. Claude already reads the project's guide automatically, so it knows what
-the site is and how it's built.
+Claude automatically reads the project's guide when it opens the folder, so it already knows what
+the site is and how it's built. If you ever open it and it seems unsure, just say
+*"this is The Vegan Counsellor website — read AGENTS.md to get up to speed."*
 
 ---
 
