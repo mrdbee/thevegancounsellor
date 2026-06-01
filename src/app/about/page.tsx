@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 
@@ -13,14 +14,14 @@ export default function AboutPage() {
     <main className="flex flex-1 flex-col">
       <section className="mx-auto w-full max-w-3xl px-6 py-16 sm:py-24">
         <div className="flex flex-col items-start gap-10 sm:flex-row sm:items-start">
-          {/* Portrait placeholder — drop a real image into /public/david.jpg
-              and swap the div below for: <Image src="/david.jpg" ... />. */}
-          <div
-            aria-hidden
-            className="flex h-32 w-32 shrink-0 items-center justify-center rounded-full bg-accent text-3xl font-medium text-accent-foreground sm:h-40 sm:w-40"
-          >
-            DC
-          </div>
+          <Image
+            src="/david_headshot.png"
+            alt="David, The Vegan Counsellor"
+            width={160}
+            height={160}
+            className="h-32 w-32 shrink-0 rounded-full object-cover sm:h-40 sm:w-40"
+            priority
+          />
 
           <div className="space-y-4">
             <p className="text-sm font-medium uppercase tracking-wide text-muted-foreground">

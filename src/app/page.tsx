@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -30,6 +31,19 @@ export default function Home() {
         <p className="pt-8 text-sm text-muted-foreground">
           Website under construction — more coming soon.
         </p>
+      </section>
+
+      {/* Hero image banner */}
+      <section className="w-full">
+        <div className="relative h-72 w-full overflow-hidden sm:h-96 md:h-[480px]">
+          <Image
+            src="/home_banner_forest.png"
+            alt="A peaceful forest path with soft dappled sunlight"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
       </section>
 
       <footer className="border-t py-6 text-center text-sm text-muted-foreground">
